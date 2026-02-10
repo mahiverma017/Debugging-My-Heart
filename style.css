@@ -275,6 +275,10 @@ button:hover {
         font-size: 21px;
     }
 
+    .story h2{
+        font-size: 22px;
+    }
+
     .cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
