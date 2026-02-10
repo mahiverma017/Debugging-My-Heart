@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Square Peg", cursive;
+    background-color: #FCE7F3;
+    transition: background 1.5s ease;
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    font-family: "Square Peg", cursive;
+    color: #9D174D;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    margin-top: 30px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f06292;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #da558a;
+}
+
+
+/* opening */
+.opening{
+    min-height: 100vh;
+    padding: 300px 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#typeText {
+    font-family: "Waterfall", cursive;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+/* flirting */
+.active {
+    background-color: #f6dfdf;
+    min-height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.flirt {
+    background-color: #ffff;
+    color: rgb(233, 126, 126);
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+}
+
+#flirtText {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.cursor {
+    animation: myBlink 1s infinite;
+}
+
+@keyframes myBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#continue {
+    background-color: rgb(188, 108, 108);
+    ;
+}
+
+#continue:hover {
+    background-color: #c35b5b;
+}
+
+
+
+/* cards */
+.story {
+    background-color: #ffebf6;
+    min-height: 100vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.story h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: #ffd1e2d2;
+    color: #ffd1e2d2;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.card.clicked {
+    background-color: #f06292;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* HEARTBEAT */
+.heartbeat {
+    background-color: #fce4ec;
+    min-height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.beat-text {
+    font-size: 34px;
+    font-weight: 800;
+}
+
+#heart {
+    margin: 26px 0;
+    font-size: 60px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+#heart:hover {
+    transform: scale(1.2);
+}
+
+/* PROPOSAL */
+.proposal {
+    background-color: #ffe6f0;
+    min-height: 100vh;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proposal h1 {
+    font-size: 42px;
+}
+
+.proposal p {
+    font-size: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FINAL */
+.final{
+    background-color: white;
+    min-height: 100vh;
+    padding: 64px 20px 0px 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.final img{
+    height: 200px;
+}
+
+.final p {
+    color: #cd4d77;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 22px;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* hearts pop out */
+.burst-heart {
+  position: fixed;
+  font-size: 20px;
+  pointer-events: none;
+  animation: burst 1s ease-out forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: 
+      translate(-50%, -150px) 
+      translateX(calc(-50px + 100px * var(--random)));
+    opacity: 0;
+  }
+}
+
+
+
+/* viewport in phone */
+@media (max-width: 500px) {
+    #typeText {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 11px 22px;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .flirt {
+        padding: 30px;
+        width: 70%;
+        max-width: 500px;
+    }
+
+    #flirtText {
+        font-size: 21px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .card {
+        font-weight: 500;
+    }
+
+    .beat-text {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    #heart {
+        font-size: 50px;
+    }
+
+    .proposal h1 {
+        font-size: 38px;
+    }
+
+    .proposal p {
+        font-size: 20px;
+    }
+    .final img{
+    height: 160px;
+}
+
+    .final p {
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+}

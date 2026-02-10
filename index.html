@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging My Heart...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Licorice&family=Poppins:wght@400;500;600&family=Square+Peg&family=Waterfall&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- OPENING -->
+    <section class="opening">
+        <h1 id="typeText"></h1>
+        <button id="start">Start the Story -></button>
+    </section>
+
+
+
+    <!-- flirting -->
+    <section class="section active">
+        <div class="flirt">
+            <p id="flirtText"></p>
+            <span class="cursor">▍</span>
+        </div>
+        <button id="continue">Click to continue</button>
+    </section>
+
+
+
+    <!-- cards -->
+    <section class="section story">
+        <h2>Click a card to unlock what I never say out loud…</h2>
+        <div class="cards">
+            <div class="card">You’re the reason I smile at my phone like an idiot</div>
+            <div class="card">I didn’t know ‘home’ could be a person until you</div>
+            <div class="card">I love the way you exist. Just… you</div>
+            <div class="card">You’re not perfect. But you’re perfect for me</div>
+            <div class="card">Okay okay… I love you more than words can explain</div>
+        </div>
+        <button id="cardHeart" class="hidden">
+            <i class="fa-solid fa-heart" style="color: #f9f6f7;"></i>
+            Touch me
+        </button>
+    </section>
+
+
+    <!-- HEARTBEAT -->
+    <section class="section heartbeat">
+        <h2 class="beat-text">This part is scary... soo be gentle</h2>
+        <div id="heart"><i class="fa-solid fa-heart" style="color: #d20031;"></i></div>
+    </section>
+
+
+    <!-- PROPOSAL -->
+    <section class="section proposal">
+        <h1>Will you be my Valentine?</h1>
+        <p>Not because it’s a day… but because it’s you.</p>
+        <button class="yesBtn">🤍 YES</button>
+        <button class="yesBtn">👉🏼👈🏼 YES, OBVIOUSLY</button>
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="section final">
+        <img src="./img/bear-love.jpeg" alt="love">
+        <h1>You’ve turned my simple days into something beautiful</h1>
+        <p>I still can’t believe I get to call you mine</p>
+
+        <p style="margin-top:30px;">
+            No matter where life takes us…<br>
+            No matter what changes…<br>
+            <b>I will choose you. Today, tomorrow and always.</b>
+        </p>
+        <button id="restartBtn">Restart</button>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
